@@ -88,12 +88,12 @@
     description = "netswig";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      firefox
-      thunderbird
-      jetbrains.pycharm-community
-      python312
-      pipenv
-      vscode
+      pkgs.firefox
+      pkgs.thunderbird
+      pkgs.python312
+      pkgs.pipenv
+      pkgs.git
+      pkgs.nmap
     ];
   };
 
@@ -105,15 +105,8 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
-  pkgs.git
-  pkgs.nmap
   pkgs.wireguard-tools
-  pkgs.emacs-nox
   pkgs.zsh
-  pkgs.zsh-history
-  pkgs.zsh-nix-shell
-  pkgs.zsh-autocomplete
-  pkgs.oh-my-zsh
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
